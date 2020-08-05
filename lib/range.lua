@@ -261,7 +261,7 @@ function _M.handle_range_request(self, res)
 
       res.status = PARTIAL_CONTENT
       ngx.header["Accept-Ranges"] = "bytes"
-      res.header["Content-Range"] = "bytes " .. range.from ..
+      ngx.header["Content-Range"] = "bytes " .. range.from ..
                                       "-" .. range.to ..
                                       "/" .. size
 
@@ -286,8 +286,8 @@ function _M.handle_range_request(self, res)
 
       res.status = PARTIAL_CONTENT
       -- TODO: No test coverage for these headers
-      res.header["Accept-Ranges"] = "bytes"
-      res.header["Content-Type"] = "multipart/byteranges; boundary=" ..
+      ngx.header["Accept-Ranges"] = "bytes"
+      ngx.header["Content-Type"] = "multipart/byteranges; boundary=" ..
                                    boundary_string
 
       return res, true
