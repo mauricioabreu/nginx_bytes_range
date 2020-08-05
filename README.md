@@ -5,7 +5,9 @@
 There are 3 location here:
 
 `/` - HTML page with video tag
+
 `/d` - dynamic response using lua (read/output video.mp4 file)
+
 `/r` - range support (read/output video.mp4 file)
 
 ## The problem
