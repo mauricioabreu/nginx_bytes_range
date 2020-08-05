@@ -20,4 +20,4 @@ As the ngx-lua-module author says [ngx-lua subrequest is a simple thing, do not 
 
 I decoupled the range module from the excelent [Ledge HTTP project](https://github.com/ledgetech/ledge/)
 
-Special thanks yo James Hurst james@pintsized.co.uk
+Special thanks to James Hurst james@pintsized.co.uk
