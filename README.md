@@ -2,11 +2,9 @@
 
 `make up-server` create a container with NGINX and the sample app.
 
-There are 3 location here:
+There are 2 location here:
 
 `/` - HTML page with video tag
-
-`/d` - dynamic response using lua (read/output video.mp4 file)
 
 `/r` - range support (read/output video.mp4 file)
 
@@ -18,6 +16,4 @@ As the ngx-lua-module author says [ngx-lua subrequest is a simple thing, do not 
 
 ## Solution
 
-I decoupled the range module from the excelent [Ledge HTTP project](https://github.com/ledgetech/ledge/)
-
-Special thanks to James Hurst james@pintsized.co.uk
+The header `Accept-Ranges` must be added in your upstream location to inform your origin accepts byte-range requests.
